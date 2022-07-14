@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model EmployeeModel;
+@using (Html.BeginForm("GetEmployee", "Employee", FormMethod.Post))
+    {
+        @Html.Label("Id    :")
+        @Html.TextBoxFor(e=>e.Id)
+        <br />
+        @Html.Label("Name :")
+        @Html.TextBoxFor(e=>e.Name)
+        <br />
+        @Html.Label("City  :")
+        @Html.TextBoxFor(e=>e.City)
+        <br />
+        @Html.Label("Email :")
+        @Html.TextBoxFor(e=>e.Email)
+        <br />
+
+        <input type="submit" value="Save">
+    }
+
+<a href="GetEmployee"><input type="button" value="Show Employee Details" /></a>
